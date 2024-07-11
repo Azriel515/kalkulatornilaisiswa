@@ -49,5 +49,11 @@ int main() {
 
         hitungRataRataBobot(siswa);
         hitungAmbangNilai(siswa, nilaiAkhir);
-    }
+
+        cout << "Lanjutkan input data siswa? (y/n): ";
+        cin >> lanjut;
+        cin.ignore(); // Membersihkan newline character dari buffer
+        
+          return 0;
 }
+    }
