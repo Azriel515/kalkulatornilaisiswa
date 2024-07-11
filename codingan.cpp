@@ -53,7 +53,7 @@ int main() {
         cout << "Lanjutkan input data siswa? (y/n): ";
         cin >> lanjut;
         cin.ignore(); // Membersihkan newline character dari buffer
-        
-          return 0;
+    } while (lanjut == 'y' || lanjut == 'Y');
+
+    return 0;
 }
-    }
