@@ -27,3 +27,27 @@ void hitungAmbangNilai(Siswa siswa, float nilaiAkhir) {
         cout << siswa.nama << " tidak lulus dengan nilai " << nilaiAkhir << endl;
     }
 }
+
+int main() {
+    char lanjut;
+    
+    do {
+        Siswa siswa;
+        cout << "Masukkan nama siswa: ";
+        getline(cin, siswa.nama); // Dapatkan nama siswa dengan getline untuk mengatasi masalah buffer
+        cout << "Masukkan nilai tugas: ";
+        cin >> siswa.nilaiTugas;
+        cout << "Masukkan nilai kuis: ";
+        cin >> siswa.nilaiKuis;
+        cout << "Masukkan nilai ujian: ";
+        cin >> siswa.nilaiUjian;
+
+        cin.ignore(); // Membersihkan newline character dari buffer
+
+        float nilaiAkhir = hitungNilaiAkhir(siswa);
+        cout << "Nilai akhir " << siswa.nama << " adalah " << nilaiAkhir << endl;
+
+        hitungRataRataBobot(siswa);
+        hitungAmbangNilai(siswa, nilaiAkhir);
+    }
+}
